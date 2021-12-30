@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Peso Espacial</title>
+    <style>
+    body
+    {
+        background-color: black;
+        color: white;
+        font-family: Helvetica;
+    }    
+    strong
+    {
+        color: darkmagenta;
+    }
+    </style>       
+</head>
+<body>
+ <script type="text/javascript"> var nombre = prompt("Hola humano, ¿Cómo de llamas?");</script>
+ <h1>El peso cambia dependiendo de la gravedad</h1>
+ <script type="text/javascript">document.write("Hola " + nombre + " sabias que no pesas lo mismo en la <strong>Tierra</strong> que en <strong>Júpiter</strong> o <strong>Marte</strong>");</script>
+ <h2>¿Cuánto crees que pesas en otro planeta humano?</h2>
+    <script>
+     var usuario = prompt("¿Cuánto pesas gordit@? :3");
+     var planeta = parseInt(input("Elige tu planeta \n Entre 1 es Marte y 2 es Jupiter"));
+     var peso = parseFloat(usuario);
+     var g_tierra = 9.81;
+     var g_marte = 3.72;
+     var g_jupiter = 24.8;
+     var nombre = "";
+     var peso_final;
+     if(planeta == 1)
+     {
+        peso_final = g_marte * peso / g_tierra;
+        nombre = "Marte";
+     }
+    else if (planeta == 2)
+    {
+        peso_final = g_jupiter * peso / g_tierra;
+        nombre = "Júpiter";
+    } 
+    else
+    {
+        document.write("<strong>Solo tenías que escoger entre 1 y 2 :(</strong>")
+    } 
+    peso_final = (peso_final.toFixed(2));
+    document.write("Tu peso en " + nombre + " es de<strong> " + peso_final + " Newtons</strong>")
+    </script>
+</body>    
+</html>
